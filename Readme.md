@@ -1,15 +1,15 @@
 # Readme
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock?ref=badge_shield)
 
 This document describes the procedures for building and launching a mock environment to test CoHDI, as well as how to perform CoHDI testing using the mock.
 
-> **Note:**  
-> In the initial version of the Mock, only CDI DRA testing can be performed because actual GPU attach/detach operations are not supported.  
-> This Mock can run in any environment that supports containers.  
+> **Note:**
+> In the initial version of the Mock, only CDI DRA testing can be performed because actual GPU attach/detach operations are not supported.
+> This Mock can run in any environment that supports containers.
 > For information about the CoHDI runtime environment, please refer to the Helm page (coming soon).
 
 Please use this Mock as an alternative for Composable Hardware Disaggregated Infrastructure Manager within the red block below.
 ![alt text](doc/mock1.png)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock?ref=badge_shield)
 
 With this Mock, we aim to be able to verify CoHDI's operation even on virtual machine environments.
 ![alt text](doc/mock2.png)
