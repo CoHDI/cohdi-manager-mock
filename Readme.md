@@ -9,6 +9,7 @@ This document describes the procedures for building and launching a mock environ
 
 Please use this Mock as an alternative for Composable Hardware Disaggregated Infrastructure Manager within the red block below.
 ![alt text](doc/mock1.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock?ref=badge_shield)
 
 With this Mock, we aim to be able to verify CoHDI's operation even on virtual machine environments.
 ![alt text](doc/mock2.png)
@@ -253,3 +254,7 @@ This version of the mock does not yet support testing for dynamic scaling.
 
 This version of the mock does not yet support testing for dynamic scaling.
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FCoHDI%2Fcohdi-manager-mock?ref=badge_large)
