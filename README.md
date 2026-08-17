@@ -4,14 +4,36 @@
 This document describes the procedures for building and launching a mock environment to test CoHDI, as well as how to perform CoHDI testing using the mock.
 
 > **Note:**
-> In the initial version of the Mock, only CDI DRA testing can be performed because actual GPU attach/detach operations are not supported.
-> This Mock can run in any environment that supports containers.
-> For information about the CoHDI runtime environment, please refer to the Helm page (coming soon).
+> There are two mock environments available for testing CoHDI:
+> [`cohdi-ci-mock`](https://github.com/CoHDI/cohdi-ci-mock) and
+> [`cohdi-manager-mock`](https://github.com/CoHDI/cohdi-manager-mock).
+>
+> - **cohdi-ci-mock**
+>   - Requires at least one GPU.
+>   - Supports testing GPU attach/detach behavior in physical or virtual machine environments.
+>   - GPU attach/detach is simulated at the OS level by performing PCI device
+>     remove/rescan operations, allowing CoHDI to detect the GPU as being
+>     attached or detached.
+>
+> - **cohdi-manager-mock**
+>   - Does not require a GPU.
+>   - Does not support testing GPU attach/detach behavior.
+>   - It is intended only for basic verification of the interaction between
+>     the CoHDI DDS component and CDI DRA, and does not provide complete
+>     attach/detach or dynamic scaling behavior.
+>
+> If a GPU is available in the test environment, we recommend using
+> `cohdi-ci-mock`. `cohdi-manager-mock` provides only limited mock behavior
+> and may be deprecated in the future.
+>
+> For information about the CoHDI runtime environment, please refer to the
+> [CoHDI Helm chart repository](https://github.com/CoHDI/cohdi-chart).
 
 Please use this Mock as an alternative for Composable Hardware Disaggregated Infrastructure Manager within the red block below.
 ![alt text](doc/mock1.png)
 
-With this Mock, we aim to be able to verify CoHDI's operation even on virtual machine environments.
+This Mock provides a simple way to verify communication between the CoHDI DDS
+component and CDI DRA, including in environments without a GPU.
 ![alt text](doc/mock2.png)
 
 ---
